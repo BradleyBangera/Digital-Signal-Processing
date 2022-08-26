@@ -1,0 +1,3 @@
+t=-10:0.01:10;
+t1=heaviside(t);
+plot(t,t1)

@@ -1,0 +1,7 @@
+clear;
+t=-10:0.01:10;
+f=heaviside(-2*t+2);
+figure(4)
+plot(t,1)
+axis([-15 15 -1 2])
+grid on

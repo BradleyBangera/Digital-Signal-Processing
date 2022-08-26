@@ -1,0 +1,7 @@
+clc;
+clf
+clear
+close all;
+n=-010:10;
+x1=n;
+stem(n,x1)
