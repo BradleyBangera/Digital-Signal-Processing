@@ -1,0 +1,17 @@
+clc;clear;clf;
+A=1;fo=100; phi=pi/6; fs=2000;
+N=input("Enter the Lenght of the Sequence:");
+n=0:1/fs:(N-1)/fs;
+Sig=A*cos(2*pi*fo*n+phi);
+w_axis=linspace(-1,1,1024);
+time_axis=0:length(Sig)-1;
+F=fftshift(fft(Sig,1024));
+Sig_dtft=abs(F);
+subplot(211); 
+stem(time_axis,Sig);
+title("Signal");
+xlabel('Index');
+subplot(212);
+plot(w_axis,Sig_dtft);
+title('DTFT Magnitude');
+xlabel("Digtal Frequency");
